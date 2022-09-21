@@ -57,13 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\ShipControl.cs" />
+    <Compile Include="Assets\Script\Laser.cs" />
     <Compile Include="Assets\Script\flicker.cs" />
     <Compile Include="Assets\Script\ShipControlNew.cs" />
     <Compile Include="Assets\Script\Thruster.cs" />
     <Compile Include="Assets\Script\OrbitCam.cs" />
     <Compile Include="Assets\Script\culling.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\Laser.cs" />
+    <Compile Include="Assets\Script\Asteroid.cs" />
+    <Compile Include="Assets\Script\Explode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

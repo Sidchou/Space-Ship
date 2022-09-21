@@ -4925,3 +4925,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 75
+  _explosion: {fileID: 4351067861662728585, guid: 095fe382ae0d1f94d8b3b6e15ed08c88, type: 3}

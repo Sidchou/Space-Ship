@@ -68,17 +68,27 @@ public class ShipControlNew : MonoBehaviour
     }
     void shoot()
     {
-        Vector3 _offset = new Vector3(-0.005f, -0.7f, -6.6f);
+        Vector3 _offset = new Vector3(-0.005f, -0.7f, 6.6f);
+        GameObject laser = null;
+        Quaternion angle = Quaternion.identity;
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(_laserPrefab, transform.position + _offset, _laserPrefab.transform.localRotation);
+            laser = Instantiate(_laserPrefab, transform.position, _laserPrefab.transform.localRotation);
+            angle = _laserPrefab.transform.localRotation;
         }
         if (Input.GetMouseButtonDown(1))
         {
+            laser = Instantiate(_laserPrefab, transform.position, _laserPrefab.transform.localRotation);
+            angle = _laserPrefab.transform.localRotation;
             _offset.z *= -1;
-            Instantiate(_laserPrefab, transform.position + _offset, _laserPrefab.transform.localRotation);
         }
-
+        if (laser != null)
+        {
+            laser.transform.parent = transform;
+            laser.transform.localPosition = _offset;
+            laser.transform.localRotation = angle;
+            laser.transform.parent = null;
+        }
     }
 
 
