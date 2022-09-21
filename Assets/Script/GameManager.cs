@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
     private bool playing = false;
     private PlayableDirector sq;
 
+    [SerializeField]
+    private GameObject endSq;
+    [SerializeField]
+    private GameObject endUi;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +31,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Timeline SQ is null");
         }
+
 
     }
 
@@ -53,6 +59,10 @@ public class GameManager : MonoBehaviour
         idleSq.SetActive(_enter);
         ship.SetActive(!_enter);
         playing = _enter;
+    }
+    public void ResetScene() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 

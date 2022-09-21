@@ -21,6 +21,8 @@ public class ShipControlNew : MonoBehaviour
     private Thruster engineLeft;
     [SerializeField]
     private Thruster engineRight;
+    [SerializeField]
+    private GameObject _laserPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,9 @@ public class ShipControlNew : MonoBehaviour
     {
         Turn();
         Move();
-
+        
+            shoot();
+        
     }
     void Turn() 
     {
@@ -50,7 +54,7 @@ public class ShipControlNew : MonoBehaviour
     void Move()
     {
         Vector3 _dir = Vector3.right * _speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             _speed = Mathf.Min(_maxSpeed, _speed + 2);
             StartCoroutine(boostLeft());
@@ -62,6 +66,22 @@ public class ShipControlNew : MonoBehaviour
         }
         transform.Translate(_dir);
     }
+    void shoot()
+    {
+        Vector3 _offset = new Vector3(-0.005f, -0.7f, -6.6f);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(_laserPrefab, transform.position + _offset, _laserPrefab.transform.localRotation);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            _offset.z *= -1;
+            Instantiate(_laserPrefab, transform.position + _offset, _laserPrefab.transform.localRotation);
+        }
+
+    }
+
+
     IEnumerator boostLeft()
     {
         int n = 0;
