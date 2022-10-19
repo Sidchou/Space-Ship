@@ -7,15 +7,11 @@ using UnityEngine.Scripting.APIUpdating;
 public class ShipControlNew : MonoBehaviour
 {
 
+ 
     [SerializeField]
-    private float _maxSpeed = 5.0f;
-    private float _speed = 0;
+    private float _speed = 50;
     [SerializeField]
     private float _turnSpeed = 5.0f;
-
-    [SerializeField]
-    private float _speedDecay = 0.95f;
-
 
     [SerializeField]
     private Thruster engineLeft;
@@ -23,19 +19,49 @@ public class ShipControlNew : MonoBehaviour
     private Thruster engineRight;
     [SerializeField]
     private GameObject _laserPrefab;
+
+    [SerializeField]
+    private GameObject VC;
+    [SerializeField]
+    private Camera _camera;
+
+    private Rigidbody _rb;
+    private Collider _collider;
     // Start is called before the first frame update
     void Start()
     {
-
+        _camera.cullingMask = 255;
+        _rb = GetComponent<Rigidbody>();
+        if (_rb == null)
+        {
+            Debug.LogError("_rb is null");
+        }
+        _collider = GetComponent<Collider>();
+        if (_collider == null)
+        {
+            Debug.LogError("_collider is null");
+        }
     }
     // Update is called once per frame
     void Update()
     {
+        Wrap();
+
         Turn();
         Move();
         
-            shoot();
+        shoot();
+        camSwitch();
         
+    }
+    void Wrap() 
+    {
+        Vector3 _p = transform.position;
+        float _d = Vector3.Magnitude(_p);
+        if (_d > 200) {
+            _p *= -1;
+        }
+        transform.position = _p;
     }
     void Turn() 
     {
@@ -53,18 +79,17 @@ public class ShipControlNew : MonoBehaviour
 
     void Move()
     {
-        Vector3 _dir = Vector3.right * _speed * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space))
+        //       Vector3 _dir = Vector3.right * _speed *Time.deltaTime;
+        Vector3 _dir = transform.right * _speed;
+
+        if (Input.GetKey(KeyCode.Space))
         {
-            _speed = Mathf.Min(_maxSpeed, _speed + 2);
+            _rb.AddForce(_dir);
             StartCoroutine(boostLeft());
             StartCoroutine(boostRight());
-        }
-        else {
-            _speed *= _speedDecay;
 
         }
-        transform.Translate(_dir);
+
     }
     void shoot()
     {
@@ -84,14 +109,30 @@ public class ShipControlNew : MonoBehaviour
         }
         if (laser != null)
         {
+            Physics.IgnoreCollision(laser.GetComponent<Collider>(), _collider);
             laser.transform.parent = transform;
             laser.transform.localPosition = _offset;
             laser.transform.localRotation = angle;
             laser.transform.parent = null;
+
         }
     }
 
+    void camSwitch() {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            VC.SetActive(!VC.activeSelf);
+            if (!VC.activeSelf)
+            {
+                _camera.cullingMask = 255;
+            }
+            else
+            {
+                _camera.cullingMask = 383;
+            }
 
+        }
+    }
     IEnumerator boostLeft()
     {
         int n = 0;

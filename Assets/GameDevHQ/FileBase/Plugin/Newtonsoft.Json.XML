@@ -861,7 +861,10 @@
         <member name="T:Newtonsoft.Json.FloatFormatHandling">
             <summary>
             Specifies float format handling options when writing special floating point numbers, e.g. <see cref="F:System.Double.NaN"/>,
-            <see cref="F:System.Double.PositiveInfinity"/> and <see cref="F:System.Double.NegativeInfinity"/> with <see cref="T:Newtonsoft.Json.JsonWriter"/>.
+            <see cref="F:System.Double.
+				 
+
+tiveInfinity"/> and <see cref="F:System.Double.NegativeInfinity"/> with <see cref="T:Newtonsoft.Json.JsonWriter"/>.
             </summary>
         </member>
         <member name="F:Newtonsoft.Json.FloatFormatHandling.String">

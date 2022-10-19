@@ -15,7 +15,7 @@ D:/Unity/Space
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-62666
+60762
 Successfully changed project path to: D:/Unity/Space
 D:/Unity/Space
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/Unity/Space
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 33.29 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 37.81 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.9f1 (ad3870b89536)
 [Subsystems] Discovering subsystems at path E:/Install/Unity/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -59,94 +59,98 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     12142 MB
     Driver:   31.0.15.1693
+Invalid texture used for cursor - check importer settings or texture creation. Texture must be RGBA32, readable, have alphaIsTransparency enabled and have no mip chain.
 Initialize mono
 Mono path[0] = 'E:/Install/Unity/2021.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Install/Unity/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Install/Unity/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Install/Unity/2021.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/Install/Unity/2021.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: E:/Install/Unity/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007267 seconds.
+Registered in 0.012493 seconds.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 32.20 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 30.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.583 seconds
+- Completed reload, in  0.659 seconds
 Domain Reload Profiling:
-	ReloadAssembly (583ms)
-		BeginReloadAssembly (110ms)
+	ReloadAssembly (659ms)
+		BeginReloadAssembly (123ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (373ms)
-			LoadAssemblies (108ms)
+		EndReloadAssembly (414ms)
+			LoadAssemblies (122ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (96ms)
+			SetupTypeCache (126ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (206ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (214ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (50ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (32ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (125ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (89ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002003 seconds.
+Registered in 0.001949 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.805 seconds
+- Completed reload, in  1.061 seconds
 Domain Reload Profiling:
-	ReloadAssembly (806ms)
-		BeginReloadAssembly (126ms)
+	ReloadAssembly (1061ms)
+		BeginReloadAssembly (313ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (587ms)
-			LoadAssemblies (87ms)
+			CreateAndSetChildDomain (179ms)
+		EndReloadAssembly (631ms)
+			LoadAssemblies (117ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (165ms)
+			SetupTypeCache (180ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (286ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (315ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (43ms)
-				ProcessInitializeOnLoadAttributes (211ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (218ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2003 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 45 unused Assets / (1.3 MB). Loaded Objects now: 2464.
-Memory consumption went from 92.6 MB to 91.3 MB.
-Total: 2.485300 ms (FindLiveObjects: 0.124400 ms CreateObjectMapping: 0.048300 ms MarkObjects: 2.080000 ms  DeleteObjects: 0.232000 ms)
+Unloading 2022 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (276.2 KB). Loaded Objects now: 2483.
+Memory consumption went from 93.2 MB to 93.0 MB.
+Total: 2.347500 ms (FindLiveObjects: 0.149900 ms CreateObjectMapping: 0.043200 ms MarkObjects: 2.036300 ms  DeleteObjects: 0.117400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,52 +164,83 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 270156.714724 seconds.
-  path: Assets/Asset/3D/asteroids2.fbx
-  artifactKey: Guid(3afa052a180db224380f3a327a6312ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/3D/asteroids2.fbx using Guid(3afa052a180db224380f3a327a6312ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2b4622a04b877840f991e41b43e750') in 0.168188 seconds 
+  Time since last request: 1955.430025 seconds.
+  path: Assets/Asset/UI/target/asset-3 1.png
+  artifactKey: Guid(f902dd5753836f04492f7d02d60d0441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset/UI/target/asset-3 1.png using Guid(f902dd5753836f04492f7d02d60d0441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0c42a8dbe866a6ab102319c8845d44c') in 0.260418 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (247.0 KB). Loaded Objects now: 2490.
+Memory consumption went from 53.0 MB to 52.8 MB.
+Total: 2.413200 ms (FindLiveObjects: 0.172800 ms CreateObjectMapping: 0.061600 ms MarkObjects: 2.088200 ms  DeleteObjects: 0.090000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Asset/3D/asteroids5.fbx
-  artifactKey: Guid(c7ce7fcc33cde2b4fa98782ed1ad5188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/3D/asteroids5.fbx using Guid(c7ce7fcc33cde2b4fa98782ed1ad5188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba46da4e088797761abb0bdbca894a40') in 0.021283 seconds 
+  Time since last request: 945.199272 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/DiskKernels.hlsl
+  artifactKey: Guid(a4811657005cf0a439cbc4a989ce9083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/DiskKernels.hlsl using Guid(a4811657005cf0a439cbc4a989ce9083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5d3dbf9ada45330bf2b7ee9302024a5') in 0.018994 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.779666 seconds.
-  path: Assets/Asset/Texture/astroid_1_DefaultMaterial_Normal.png
-  artifactKey: Guid(2b84a595f40208f4f9b842cb5ca59855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_1_DefaultMaterial_Normal.png using Guid(2b84a595f40208f4f9b842cb5ca59855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c1c4e46223af80a6f70cdb5884c03a') in 0.143784 seconds 
+  Time since last request: 0.000376 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Distortion.hlsl
+  artifactKey: Guid(c053166c69db5b943a5e70ec28113a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/Distortion.hlsl using Guid(c053166c69db5b943a5e70ec28113a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7acb30c981590727dbd08561a65f58f') in 0.011116 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Asset/Texture/astroid_3_DefaultMaterial_SpecularSmoothness.png
-  artifactKey: Guid(c19abc609d70ad64c929d9af63f86dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_3_DefaultMaterial_SpecularSmoothness.png using Guid(c19abc609d70ad64c929d9af63f86dac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90970d0fc5468ba1ecddc2dbe6337b9') in 0.022503 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Asset/Texture/astroid_1_DefaultMaterial_SpecularSmoothness.png
-  artifactKey: Guid(9f7e9248d6090ee419352417c747a7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_1_DefaultMaterial_SpecularSmoothness.png using Guid(9f7e9248d6090ee419352417c747a7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bae60d94f728570c8d05aa7c20b015d') in 0.061260 seconds 
+  Time since last request: 0.015100 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/GaussianDownsample.compute
+  artifactKey: Guid(6dba4103d23a7904fbc49099355aff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/GaussianDownsample.compute using Guid(6dba4103d23a7904fbc49099355aff3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3102c0f4564cf09803d865bf73aa0d7f') in 0.010439 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/Asset/Texture/astroid_5_DefaultMaterial_SpecularSmoothness.png
-  artifactKey: Guid(73d18b51694e3b849bcb3a96d845d389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_5_DefaultMaterial_SpecularSmoothness.png using Guid(73d18b51694e3b849bcb3a96d845d389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a20531debd4143cae4968c9db3da5d8') in 0.017585 seconds 
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasingBridge.hlsl
+  artifactKey: Guid(4484ba9c9f221894bad091ea59c4b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasingBridge.hlsl using Guid(4484ba9c9f221894bad091ea59c4b9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59bfe8fbb93ade55886229e19aca074') in 0.011846 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Asset/Texture/astroid_4_DefaultMaterial_AlbedoTransparency.png
-  artifactKey: Guid(b2ba6b94186523b42a0edc5a4e86da3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_4_DefaultMaterial_AlbedoTransparency.png using Guid(b2ba6b94186523b42a0edc5a4e86da3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82fd1122636edef4b32ca2ccd7591e6f') in 0.018751 seconds 
+  Time since last request: 0.000014 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute
+  artifactKey: Guid(4c63bc487e6c29a4a99f85a6c47b292b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute using Guid(4c63bc487e6c29a4a99f85a6c47b292b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faeff41e5c2e9943bd64d6fdd3a2b888') in 0.006495 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Asset/Texture/astroid_5_DefaultMaterial_AlbedoTransparency.png
-  artifactKey: Guid(fc254f7aa66d60349a1ef1c1e8fb5220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Asset/Texture/astroid_5_DefaultMaterial_AlbedoTransparency.png using Guid(fc254f7aa66d60349a1ef1c1e8fb5220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5656a6d0cca9a1e0e45c84ee0a6098de') in 0.033942 seconds 
+  Time since last request: 0.000042 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ScalableAO.hlsl
+  artifactKey: Guid(e4b5af8727f8b8e49aa97c2e8e5d1a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ScalableAO.hlsl using Guid(e4b5af8727f8b8e49aa97c2e8e5d1a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293696a94d6559114fe92c086a29dd87') in 0.008204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ExposureHistogram.hlsl
+  artifactKey: Guid(e02724c54d545ad439d7a5fa991ae924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/ExposureHistogram.hlsl using Guid(e02724c54d545ad439d7a5fa991ae924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d631c3b14e26bc3caf1fbab6f4c94b') in 0.010611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/FastApproximateAntialiasing.hlsl
+  artifactKey: Guid(817a98c8f709269458e50b65910ed4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/FastApproximateAntialiasing.hlsl using Guid(817a98c8f709269458e50b65910ed4bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df124d54e49fa690f60ce4f99def9df') in 0.013422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl
+  artifactKey: Guid(3e6879594f0f31c42b64e91e59fe78f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.postprocessing/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl using Guid(3e6879594f0f31c42b64e91e59fe78f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '522e77d40296c0c31e85afa67ae17132') in 0.012317 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

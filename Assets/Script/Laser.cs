@@ -8,10 +8,12 @@ public class Laser : MonoBehaviour
     private float _speed = 5;
     [SerializeField]
     private GameObject _explosion;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 5);
 
     }
 
@@ -27,10 +29,19 @@ public class Laser : MonoBehaviour
         {
             Explode();
         }
+
+
     }
-    private void OnCollisionStay(Collision collision)
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.transform.tag == "Asteroid")
+    //    {
+    //        Explode();
+    //    }
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.tag == "Asteroid")
+        if (other.tag == "Target")
         {
             Explode();
         }
@@ -38,7 +49,7 @@ public class Laser : MonoBehaviour
     private void Explode()
     {
         Instantiate(_explosion, transform.position + transform.up * _speed * Time.deltaTime * 2, transform.rotation);
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.05f);
     }
 
 }

@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,17 @@ public class GameManager : MonoBehaviour
     private GameObject endSq;
     [SerializeField]
     private GameObject endUi;
+
+    [SerializeField]
+    private GameObject targetUI;
+
+    [SerializeField]
+    private CinemachineBrain cinemachineBrain;
+    [SerializeField]
+    private Transform worldupShip;
+    [SerializeField]
+    private Camera cam;
+    private int culling;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +44,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Timeline SQ is null");
         }
 
-
     }
 
     // Update is called once per frame
@@ -42,7 +53,6 @@ public class GameManager : MonoBehaviour
         {
             CutScene(false);
             idleTimer = Time.time;
-
         }
 
         if (Time.time - idleTimer > idleTime)
@@ -52,6 +62,7 @@ public class GameManager : MonoBehaviour
                 sq.time = 0;
             }
             CutScene(true);
+            culling = cam.cullingMask;
         }
     }
     void CutScene(bool _enter)
@@ -59,6 +70,16 @@ public class GameManager : MonoBehaviour
         idleSq.SetActive(_enter);
         ship.SetActive(!_enter);
         playing = _enter;
+        if (_enter)
+        {
+            cinemachineBrain.m_WorldUpOverride = null;
+            cam.cullingMask = 127;
+        }
+        else
+        {
+            cinemachineBrain.m_WorldUpOverride = worldupShip;
+            cam.cullingMask = culling;
+        }
     }
     public void ResetScene() 
     {
