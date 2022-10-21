@@ -330,7 +330,6 @@
 "Assets/GameDevHQ/FileBase/Extensions/Systems/Utilities/Transparent_Background/Script/TransparentBackgroundScreenshotRecorder.cs"
 "Assets/Script/ASpawner.cs"
 "Assets/Script/Asteroid.cs"
-"Assets/Script/culling.cs"
 "Assets/Script/Curser.cs"
 "Assets/Script/Explode.cs"
 "Assets/Script/flicker.cs"

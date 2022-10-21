@@ -76,7 +76,7 @@ public class Asteroid : MonoBehaviour
         float _d = Vector3.Magnitude(_p);
         if (_d > 200)
         {
-            _p *= -1;
+            _p *= -0.9f;
         }
         transform.position = _p;
     }

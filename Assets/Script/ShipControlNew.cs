@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.UI;
 
 public class ShipControlNew : MonoBehaviour
 {
@@ -24,13 +25,16 @@ public class ShipControlNew : MonoBehaviour
     private GameObject VC;
     [SerializeField]
     private Camera _camera;
+    private int mask = 255;
 
     private Rigidbody _rb;
     private Collider _collider;
+    private bool end = false;
     // Start is called before the first frame update
     void Start()
     {
-        _camera.cullingMask = 255;
+        mask = 255;
+        _camera.cullingMask = mask;
         _rb = GetComponent<Rigidbody>();
         if (_rb == null)
         {
@@ -45,21 +49,23 @@ public class ShipControlNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Wrap();
+        if (!end)
+        {
+            Wrap();
 
-        Turn();
-        Move();
-        
-        shoot();
-        camSwitch();
-        
+            Turn();
+            Move();
+
+            shoot();
+            camSwitch();
+        }
     }
     void Wrap() 
     {
         Vector3 _p = transform.position;
         float _d = Vector3.Magnitude(_p);
         if (_d > 200) {
-            _p *= -1;
+            _p *= -0.9f;
         }
         transform.position = _p;
     }
@@ -124,14 +130,20 @@ public class ShipControlNew : MonoBehaviour
             VC.SetActive(!VC.activeSelf);
             if (!VC.activeSelf)
             {
-                _camera.cullingMask = 255;
+                mask = 255;
+                _camera.cullingMask = mask;
             }
             else
             {
-                _camera.cullingMask = 383;
+                mask = 383;
+                _camera.cullingMask = mask;
             }
 
         }
+    }
+    public void NoIdle()
+    {
+        _camera.cullingMask = mask;
     }
     IEnumerator boostLeft()
     {
@@ -157,5 +169,10 @@ public class ShipControlNew : MonoBehaviour
         }
         engineRight.Boost(false);
     }
-
+    public void EndGame() 
+    {
+        end = true;
+        mask = 383;
+        _camera.cullingMask = mask;
+    }
 }

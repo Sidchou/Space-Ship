@@ -16,6 +16,8 @@ public class targetCount : MonoBehaviour
     private GameObject EndSQ;
     [SerializeField]
     private Curser curser;
+    [SerializeField]
+    private ShipControlNew shipControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class targetCount : MonoBehaviour
         targets = new Image[tCount];
         for (int i = 0; i < tCount; i++)
         {
-            targets[i] = Instantiate(targetUI, new Vector3(110*(0.5f+i),55,0),Quaternion.identity, transform); 
+            targets[i] = Instantiate(targetUI, new Vector3(60*(0.5f+i),30,0),Quaternion.identity, transform); 
 
         }
 
@@ -36,6 +38,7 @@ public class targetCount : MonoBehaviour
         {
             EndSQ.SetActive(true);
             curser.ShowCurse(true);
+            shipControl.EndGame();
         }
     }
     public void UpdateCount() {

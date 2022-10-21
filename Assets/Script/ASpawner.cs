@@ -13,7 +13,7 @@ public class ASpawner : MonoBehaviour
         for (int i = 0; i < asteroids.Length; i++)
         {
             Vector3 _p = new Vector3(Random.Range(50,r)* Mathf.Sign(Random.value-0.5f), Random.Range(-r, r), Random.Range(-r, r));
-            Instantiate(asteroids[i], _p, Quaternion.identity);
+            Instantiate(asteroids[i], _p, Quaternion.identity,transform);
         }
     }
 

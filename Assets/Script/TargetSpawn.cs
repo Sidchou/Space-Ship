@@ -16,7 +16,7 @@ public class TargetSpawn : MonoBehaviour
         {
             Vector3 _p = new Vector3(Random.Range(-r, r), Random.Range(-r, r), Random.Range(-r, r));
 
-            Instantiate(target, _p, Quaternion.identity);
+            Instantiate(target, _p, Quaternion.identity,transform);
         }
     }
 

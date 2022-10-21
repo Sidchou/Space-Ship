@@ -201,6 +201,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 95
@@ -574,7 +578,7 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 7da7e28dee61d05f75e583bfd2a94c30
+      Hash: 8423633d8f702b0429b500e5b2fdc6e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: targetCount
@@ -1156,12 +1160,6 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: culling
-  - hash:
-      serializedVersion: 2
       Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -1216,7 +1214,7 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
-      Hash: a60ffdfbe008c3ada4f3e0a5042488c5
+      Hash: 0d552e77fe91c67caa63b5b923908afe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1295,4 +1293,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity/build/Space
+  playerPath: D:/Unity/build/Space/Space

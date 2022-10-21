@@ -29,7 +29,7 @@ public class Laser : MonoBehaviour
         {
             Explode();
         }
-
+        Wrap();
 
     }
     //private void OnCollisionStay(Collision collision)
@@ -51,5 +51,14 @@ public class Laser : MonoBehaviour
         Instantiate(_explosion, transform.position + transform.up * _speed * Time.deltaTime * 2, transform.rotation);
         Destroy(gameObject, 0.05f);
     }
-
+    void Wrap()
+    {
+        Vector3 _p = transform.position;
+        float _d = Vector3.Magnitude(_p);
+        if (_d > 200)
+        {
+            _p *= -0.9f;
+        }
+        transform.position = _p;
+    }
 }
